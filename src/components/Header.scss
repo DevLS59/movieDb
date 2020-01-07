@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+// colors
+$mainBlue : #307d99;
+$red : #c0392b;
+$white : #fff;
+
+//line
+$line : 2em;
+
+
+body {
+    margin : 0;
+   
+    font-family: 'Montserrat', sans-serif;
+}
+
+section {
+    padding : 0 1em;
+}
+.hero-bg {
+    // Photo by Thomas Charters on Unsplash
+    background :  url('../images/cinema-bg.jpg');
+    background-size : cover;
+    background-repeat : none;
+    background-position :center;
+    color : $white;
+    text-align : center;
+    padding-bottom : 4em; 
+    
+    header {
+        padding : 1em 0;
+    }
+
+    a {
+        color : $white;
+        text-decoration : none;
+        font-weight : bold;
+        font-size : 1.2rem;
+        
+    }
+
+    h1 {
+        font-size : 2.5rem;
+        margin : 2em 0 1.2em;
+
+        span {
+            text-transform : uppercase;
+            display : block;
+            font-size : 1.4rem;
+            position : relative;
+            z-index : 1;
+
+            &::before {
+                content : '';
+                position : absolute;
+                width : 3em;
+                background : $mainBlue;
+                height : 0.4em;
+                bottom : 0;
+                background : $red;
+                z-index : -1;
+                margin-left : -0.3em;
+            }
+        }
+    }
+
+    p{
+        font-weight : bold;
+        margin : 0 1em 3em;
+        line-height : $line;
+    }
+
+    .form-container {
+        background : $white;
+        margin : 2em -1em 0;
+        padding : 2em;
+
+        label {
+            color : $mainBlue;
+            font-weight : bold;
+            display : block;
+            margin-bottom : 1em;
+            font-size : 1.2rem;
+        }
+
+        input[type=text] {
+            border : 1px solid #707070;
+            width : 100%;
+            padding : 1em;
+            box-sizing: border-box;
+            border-radius :0.5em;
+            margin-top : 1.2em;
+        }
+
+        p {
+            color : gray;
+            margin-bottom : 1.5em;
+            font-weight : normal;
+            font-size : 0.9rem;
+            margin-top : .3em;
+        }
+
+        input[type=button] {
+
+            background-color : $red;
+            border : none;
+            width : 100%;
+            color : $white;
+            font-weight: bold;
+            padding : 1em 0;
+            border-radius : .5em;
+            font-size : 1.3em;
+            cursor : pointer;
+
+            &:hover {
+                background : #fc412d;
+            }
+        }
+
+    }
+}
+
+//media queries 
+@media (min-width : 730px) {
+
+    section {
+        margin : 0 4em;
+    }
+
+   .hero-bg .form-container {
+        margin : 2em -5em 0;
+        
+    }
+}
+
+@media (min-width : 970px) {
+
+    .hero-bg  {
+        text-align : left;
+        
+        section {
+            width : 65%;
+            max-width : 800px;
+
+            p {
+                margin : 0 0 3em;
+            }
+
+            .form-container {
+                margin : 2em 0 0;
+                padding : 2em;
+                border-radius : .5em;
+                box-shadow : 10px 10px 10px rgba(0,0,0,.3);
+
+                form {
+                    display : flex;
+    
+                    .form-left {
+                        width : 70%;
+
+                        label {
+                            margin : 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .hero-bg .form-container input[type=button]{
+        font-size : 1.1em;
+        margin-left : 1em;
+        height: fit-content;
+        margin-top :2.2em;
+        padding : 0.7em 0;
+        width : 30%;
+    }
+}
