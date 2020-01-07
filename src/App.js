@@ -6,6 +6,8 @@ import './App.css';
 
 //import Components
 import Header from './components/Header'
+import Results from './components/Results'
+import Error from './components/Error'
 
 function App() {
     
@@ -38,6 +40,12 @@ function App() {
             <header className="app-header">
                 <Header  handleInput = {handleInput} search={search} />
             </header>
+
+            <main className="container-result">
+                { (results) ?  <Results results={results} /> : <Error />
+                    
+                }
+            </main>
     </div>
   );
 }

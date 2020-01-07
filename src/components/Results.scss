@@ -1,0 +1,48 @@
+.container-result {
+    width : 90%;
+    height : auto;
+    margin :50px auto;
+}
+.results {
+    display : flex;
+    flex-wrap : wrap;
+    justify-content: space-around;
+   
+}
+
+.result {
+    width : 25%;
+    min-width : 200px;
+    margin : 5px;
+    text-align: center;
+    margin : auto;
+    cursor : pointer;
+    
+    img {
+        width : 100%;
+    }
+}
+
+
+.popup {
+    position : fixed;
+    top : 0;
+    left : 0;
+    width : 100vw;
+    height : 100vh;
+    background-color : #445565;
+    overflow-y : scroll;
+    
+    .content {
+       display : block;
+       width : 100%;
+       max-width : 968px;
+       margin : 0 auto
+    } 
+}
+
+.container-error {
+    background : #e74c3c;
+    color : #fff;
+    padding : 15px;
+}
