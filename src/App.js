@@ -50,7 +50,7 @@ function App() {
     return (
         
         <div className="App">
-     
+
             <header className="app-header">
                 <Header  handleInput = {handleInput} search={search} />
             </header>
@@ -63,7 +63,7 @@ function App() {
 {(typeof selected.Title != "undefined" ) ? <Popup selected={selected} closePopup={closePopup} /> : false} 
             </main>
     </div>
-  );
+);
 }
 
 export default App;
